@@ -1,0 +1,11 @@
+addAuto=INSERT INTO AUTOMOTIVE (make, model, base_price) VALUES ('%s', '%s', '%f');
+addOptionSet=INSERT INTO OPTIONSET (name, auto_id) VALUES ('%s', '%d');
+addOption=INSERT INTO OPTIONS (name, price, optionset_id) VALUES('%s', '%f', '%d');
+deleteAuto=DELETE FROM AUTOMOTIVE WHERE model = '%s';
+getModelList=SELECT id, make, model, base_price FROM AUTOMOTIVE;
+getOptionSetList=SELECT id, name FROM OPTIONSET WHERE auto_id = '%d';
+getOptionList=SELECT id, name, price FROM OPTIONS WHERE optionset_id = '%d';
+findAuto=SELECT id FROM AUTOMOTIVE WHERE model = '%s';
+findOptionSet=SELECT id FROM OPTIONSET WHERE auto_id = '%d' AND name = '%s';
+updateOptionSetName=UPDATE OPTIONSET SET name = '%s' WHERE auto_id = '%d' AND name = '%s';
+updateOptionPrice=UPDATE OPTIONS SET price = '%f' WHERE optionset_id = '%d' AND name = '%s';
